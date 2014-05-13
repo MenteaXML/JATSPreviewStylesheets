@@ -4349,26 +4349,30 @@ CHANGES TO NLM JATS v3.0 stylesheet        (wap) v1.0 (2009-12-08)
       several elements, such as figures and tables. -->
 
 
-<!-- Variable declarations switch autonumbering on and off.
+<!-- Parameters for switching autonumbering on and off.
      In some cases, elements are autolabeled on a case-by-case
      basis (such as footnotes, which are allowed to be
      unlabeled in some cases but require autolabeling in others;
-     these variables, in contrast, are intended to switch
-     labelling for entire element classes. -->
-  
-<xsl:variable name="auto-label-app" select="false()"/>
-<xsl:variable name="auto-label-boxed-text" select="false()"/>
-<xsl:variable name="auto-label-chem-struct-wrap" select="false()"/>
-<xsl:variable name="auto-label-disp-formula" select="false()"/>
-<xsl:variable name="auto-label-fig" select="false()"/>
-<xsl:variable name="auto-label-sec" select="false()"/>
+     these parameters, in contrast, are intended to switch
+     labelling for entire element classes.
 
-<xsl:variable name="auto-label-ref" select="not(//ref[label])"/>
+     When setting with a string value, e.g., when setting a parameter
+     from the command line, any value other than the empty string
+     counts as true. -->
+  
+<xsl:param name="auto-label-app" select="false()"/>
+<xsl:param name="auto-label-boxed-text" select="false()"/>
+<xsl:param name="auto-label-chem-struct-wrap" select="false()"/>
+<xsl:param name="auto-label-disp-formula" select="false()"/>
+<xsl:param name="auto-label-fig" select="false()"/>
+<xsl:param name="auto-label-sec" select="false()"/>
+
+<xsl:param name="auto-label-ref" select="not(//ref[label])"/>
 <!-- ref elements are labeled unless any ref already has a label -->
 
-<xsl:variable name="auto-label-statement" select="false()"/>
-<xsl:variable name="auto-label-supplementary" select="false()"/>
-<xsl:variable name="auto-label-table-wrap" select="false()"/>
+<xsl:param name="auto-label-statement" select="false()"/>
+<xsl:param name="auto-label-supplementary" select="false()"/>
+<xsl:param name="auto-label-table-wrap" select="false()"/>
 
 <!--
   The following (commented) variable assignments show how 

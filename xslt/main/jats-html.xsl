@@ -3123,18 +3123,18 @@ or pipeline) parameterized.
           trans-abstract, verse-group -->
 
 
-  <xsl:variable name="auto-label-app" select="false()"/>
-  <xsl:variable name="auto-label-boxed-text" select="false()"/>
-  <xsl:variable name="auto-label-chem-struct-wrap" select="false()"/>
-  <xsl:variable name="auto-label-disp-formula" select="false()"/>
-  <xsl:variable name="auto-label-fig" select="false()"/>
-  <xsl:variable name="auto-label-ref" select="not(//ref[label])"/>
+  <xsl:param name="auto-label-app" select="false()"/>
+  <xsl:param name="auto-label-boxed-text" select="false()"/>
+  <xsl:param name="auto-label-chem-struct-wrap" select="false()"/>
+  <xsl:param name="auto-label-disp-formula" select="false()"/>
+  <xsl:param name="auto-label-fig" select="false()"/>
+  <xsl:param name="auto-label-ref" select="not(//ref[label])"/>
   <!-- ref elements are labeled unless any ref already has a label -->
   
-  <xsl:variable name="auto-label-statement" select="false()"/>
-  <xsl:variable name="auto-label-supplementary"
+  <xsl:param name="auto-label-statement" select="false()"/>
+  <xsl:param name="auto-label-supplementary"
     select="false()"/>
-  <xsl:variable name="auto-label-table-wrap" select="false()"/>
+  <xsl:param name="auto-label-table-wrap" select="false()"/>
 
 <!--
   These variables assignments show how autolabeling can be 
